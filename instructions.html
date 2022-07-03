@@ -1,0 +1,118 @@
+<!--No CSS é OBRIGATÓRIO ;
+id="" - serve para identificar, única(Ex:CPF) chama id [ #nome do id ]
+class="" - serve para identificar e pode ser usada por mais de um(Ex:CEP) chamar class[ .nome da class ]
+
+Unidades de Medidas
+-Absolutas
+    px (pixels) 1/100 polegadas 0,254mm
+    in (inches/polegadas)
+    cm / mm (centímetro / milímetro)
+-Relativas
+    % calcula o tamanho relativo ao elemento pai
+    vw (view width) 1vw é 1% da largura da janela do navegador
+    vh (view height) 1vw é 1% da altura da janela do navegador
+    em é uma unidade relativa ao elemento pai
+    rem é uma unidade relativa ao elemento raiz
+
+Textos
+    - Color: red;  - cor
+    -font-size: 30px ;   - tamanho da fonte da letra
+    -font-weight: 100px;  -  a espessura da letra 
+    -font-family:'Roboto', sans-serif; - tipo da fonte  |  sans-serif  -  caso a primeira fonte não carregue ele vai para uma fonte da família sans-serif
+    -line-style: italic;  - estilo da fonte italico
+    -line-height: 50px;  - espaçamento entre as linhas
+    -letter-spacing: 10px;  -  espaçamento entre as letras
+    -word-spacing: 40px;  -  espaçamento entre as palavras
+    -text-align: center;  -  texto alinhado ao centro
+    -text-transform: capitalize;  -  transformar as letras, todos maiúsculo, minúsculo ou a primeira letra maiúsculo 
+    -text-decoration: underline;  -  uma linha embaixo do texto, o sublinhado
+    -text-shadow: 5px 5px 10px red;  - sombra da letra  ( 1° argumento= tanto da sombra na horizontal, 2° arg= o tanto na vertical, 3°arg= a estimação (meio borrado), 4°arg= cor da sombra
+
+    [ [ extenção ColorZilla - para pegar cor de um objeto no site ] ]
+
+    padding: 10px 50px 30px 5px;  - é o espaço interno da caixa (1ºarg= cima, 2ºarg= direita, 3ºarg= baixo, 4ºarg= esquerda)
+              12h  15h  18h  21h
+
+    box-sizing: border-box; - os elementos são comprimidos não passam da altura e largua definida, a caixa fica do msm tamanho
+    box-sizing: content-box; - os elementos serão somados(altura + largura+ margem ...) crescendo a caixa
+
+DISPLAY    
+    -BLOCK
+        Vem como padrão: div, section, p, ul, li, article, h1, h2...
+        -Ocupa 100% da largura do elemento pai
+        -Sempre ocupa toda a sua linha
+        -altura definida de acordo com o conteúdo
+        -Podemos definir valores de margin
+
+    -INLINE
+        vem como padrão: a, span, b, i ...
+        -Elementos em linha
+        -Não permite alterar height e width
+        -Não podemos definir valores de margin top e botton
+        -Ganha comportamento de uma palavra
+
+    -INLINE_BLOCK
+        -Elementos em linha, porém com características do display block
+        -Altura e largura podem ser alteradas
+    
+!important pode definir uma linha prioritária
+    Ex: color red !important; - defini a cor red, não deixando o blue sobrepor, pois está como prioritária
+        color blue;
+
+POSITION
+        position: static (padrão) - Não aceita valores de top, bottom, right e left.
+        position: fixed - fixa o elemento na tela.
+        position: sticky - age como um adesivo, fixa o elemento só onde eu determinar.
+        position: relative - posição relativa a posição inicial dele.
+        position: absolute - posição absoluta a algum elemento ou a página.
+                                -SE não tiver pai / pai for static -> posiciona referente a página.
+                                -SE o pai NÃO for static -> Posiciona referente ao pai.
+        propriedades:
+            -top
+            -bottom
+            -left
+            -right
+
+PSEUDO ELEMENTOS [ [ são :: ] ]- são utilizados para estilizar um elemento da tag
+   input::placeholder { cor: blue;}  - estiliza só o placeholder da tag input
+   p::first-letter { cor: red;}  - estiliza a primeira letra da tag paragrafo
+   a::after { content: "🚀";}  - estiliza o content(conteúdo) after(antes) do texto escrito na tag a
+   a::before { content: "😜"}  - estiliza o content(conteúdo) before(depois) do texto escrito na tag a
+
+PSEUDO CLASSES [ [ são : ] ] - é escolher trocar estilos em momentos especificos ou selecionar elementos específicos
+    :active -> Quando o elemento está ativo, ou seja, está sendo pressionado
+    :visited -> seleciona o link que foi visitado
+    :hover -> quando o mouse passa em cima do elemento
+    :checked -> usado para estilizar em radio / checkbox / select 
+    :disabled -> elemento desabilitado / button / input
+    :enabled -> elemento está habilitado
+    :focus -> é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento
+    :read-only -> seleciona input ou textarea que são apenas leitura
+    :empy -> elemento que não tem filho
+
+    :first-child -> primeiro filho / ex: primeira li de uma ul / primeiro span de uma div
+    :first--of-type -> primeiro elemento de seu tipo entre os filhos de seu elemento pai.
+    :last-child -> último filho
+    :last-of-type -> último elemento de seu tipo entre os filhos de seu elemento pai
+    :not() -> estliza os elementos, exceto o que esta dentro do () Ex: div:not(p)
+    :nth-child() -> seleciona o elemento baseado na sua posição. Ex: :nth-child(3)
+    :nth-last-child() -> seleciona o elemento baseado na usa posição, contando de trás para frente.
+
+RESPONSIVIDADE
+    @media (max-width: 600px) { dev { background: color}} 
+    all: Para todos os dispositivos.
+    Braille: Para dispositivos táteis.
+    Embossed: Para dispositivos que imprimem em braile.
+    Handheld: Para dispositivos portáteis, geralmente com telas pequenas e banda limitada.
+    Print: Para impressão em papel.
+    Projection: Para apresentação como PPS.
+    Screen: Para monitores ou dispositivos com telas coloridas e resolução adequada.
+    Speech: Para sintetizadores de voz. As CSS 2 tem uma especificação de CSS chamada Aural, onde podemos formatar a voz dos sintetizadores.
+
+Orientação
+    orientation: portrait -> altura maior que a largura. - orientação Retrato
+    orientation: landscape -> largura maior que a altura. orientação Paisagem
+ 
+    @media screen and (max-width: 600px)and (orientation: landscape) { div { background: red;}}
+
+-->
